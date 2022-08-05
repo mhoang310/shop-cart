@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { Routes, Route } from 'react-router-dom';
+
+import Home from './modules/Home/Home';
+import HomeTemplate from './templates/HomeTemplate/HomeTemplate';
+import ProductDetail from './modules/ProductDetail/ProductDetail';
+import NotFound from './modules/NotFound/NotFound';
+import Cart from './components/Cart';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<HomeTemplate />} >
+          <Route index element={<Home />} />
+          {/* <Route path="/products/:productType" element={<Telephone />} />  */}
+          <Route path="/products/:productId" element={<ProductDetail />} />
+          <Route path="/carts" element={<Cart />} />          
+
+        </Route>
+
+        {/* Khi không có bất kì path nào khớp với url sẽ render ra component NotFound, path="*" khớp với mọi url  */}
+        <Route path="*" element={<NotFound />} />         
+      </Routes>
+    </>
   );
 }
 
