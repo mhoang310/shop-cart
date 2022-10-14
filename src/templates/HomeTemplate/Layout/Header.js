@@ -89,7 +89,7 @@ export default function Header({ fixed }) {
                                     className="flex items-center px-4 -mb-1 dark:border-transparent uppercase mt-2 text-white"
                                     onClick={() => handleSearch("Iphone")}
                                 >
-                                    Telephone
+                                    Iphone
                                 </a>
                             </li>
                             <li className="nav-item">
@@ -97,7 +97,7 @@ export default function Header({ fixed }) {
                                     className="flex items-center px-4 -mb-1 dark:border-transparent uppercase mt-2 text-white"
                                     onClick={() => handleSearch("Samsung")}
                                 >
-                                    Tweet
+                                    Samsung
                                 </a>
                             </li>
                             <li className="nav-item">
@@ -113,7 +113,7 @@ export default function Header({ fixed }) {
                             </Link>
                             <span className="boder-2 border-black-500 rounded-full ml-3 mt-1 bg-white p-2 w-7 text-center">{cartTotalAmount}</span>
                         </ul>
-                        <button type="button" className="flex px-6 py-2 font-semibold rounded lg:block dark:bg-violet-400 dark:text-gray-900">Log in</button>
+                        {/* <button type="button" className="flex px-6 py-2 font-semibold rounded lg:block dark:bg-violet-400 dark:text-gray-900">Log in</button> */}
 
                     </div>
                 </div>
